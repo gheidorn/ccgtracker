@@ -1,0 +1,356 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* CCGTrackerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* CCGTrackerAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		F267DDBB0F897388007B24CE /* CardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F267DDBA0F897388007B24CE /* CardTableViewController.m */; };
+		F267DDBE0F8973DD007B24CE /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F267DDBD0F8973DD007B24CE /* CardViewController.m */; };
+		F267DF0F0F89A0B0007B24CE /* card_collector.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F267DE720F8984D4007B24CE /* card_collector.sqlite */; };
+		F267E0250F8AAE00007B24CE /* CardTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F267E0240F8AAE00007B24CE /* CardTableViewController.xib */; };
+		F2910EA90F76F365006C3404 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = F2910EA40F76F365006C3404 /* FMDatabase.m */; };
+		F2910EAA0F76F365006C3404 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F2910EA60F76F365006C3404 /* FMDatabaseAdditions.m */; };
+		F2910EAB0F76F365006C3404 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = F2910EA80F76F365006C3404 /* FMResultSet.m */; };
+		F2910EAE0F76F372006C3404 /* CardDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = F2910EAD0F76F372006C3404 /* CardDAO.m */; };
+		F2910EB60F76F392006C3404 /* CardSet.m in Sources */ = {isa = PBXBuildFile; fileRef = F2910EB30F76F392006C3404 /* CardSet.m */; };
+		F2910EB70F76F392006C3404 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = F2910EB50F76F392006C3404 /* Card.m */; };
+		F2910F610F781420006C3404 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F2910F600F781420006C3404 /* libsqlite3.0.dylib */; };
+		F2910F710F7816AE006C3404 /* CardSetTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2910F700F7816AE006C3404 /* CardSetTableViewController.m */; };
+		F2910FCE0F781D1B006C3404 /* CardSetTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2910FCD0F781D1B006C3404 /* CardSetTableViewController.xib */; };
+		F2BCF18A0F8E8290006935D1 /* CardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BCF1890F8E8290006935D1 /* CardTableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* CCGTrackerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCGTrackerAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* CCGTrackerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCGTrackerAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* CCGTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCGTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* CCGTracker_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCGTracker_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F267DDB90F897388007B24CE /* CardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardTableViewController.h; sourceTree = "<group>"; };
+		F267DDBA0F897388007B24CE /* CardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardTableViewController.m; sourceTree = "<group>"; };
+		F267DDBC0F8973DD007B24CE /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
+		F267DDBD0F8973DD007B24CE /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
+		F267DE720F8984D4007B24CE /* card_collector.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = card_collector.sqlite; sourceTree = "<group>"; };
+		F267E0240F8AAE00007B24CE /* CardTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardTableViewController.xib; sourceTree = "<group>"; };
+		F2910EA30F76F364006C3404 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		F2910EA40F76F365006C3404 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		F2910EA50F76F365006C3404 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		F2910EA60F76F365006C3404 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		F2910EA70F76F365006C3404 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		F2910EA80F76F365006C3404 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		F2910EAC0F76F372006C3404 /* CardDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardDAO.h; sourceTree = "<group>"; };
+		F2910EAD0F76F372006C3404 /* CardDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardDAO.m; sourceTree = "<group>"; };
+		F2910EB20F76F392006C3404 /* CardSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardSet.h; sourceTree = "<group>"; };
+		F2910EB30F76F392006C3404 /* CardSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardSet.m; sourceTree = "<group>"; };
+		F2910EB40F76F392006C3404 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		F2910EB50F76F392006C3404 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		F2910F600F781420006C3404 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		F2910F6F0F7816AE006C3404 /* CardSetTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardSetTableViewController.h; sourceTree = "<group>"; };
+		F2910F700F7816AE006C3404 /* CardSetTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardSetTableViewController.m; sourceTree = "<group>"; };
+		F2910FCD0F781D1B006C3404 /* CardSetTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardSetTableViewController.xib; sourceTree = "<group>"; };
+		F2BCF1880F8E8290006935D1 /* CardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardTableViewCell.h; sourceTree = "<group>"; };
+		F2BCF1890F8E8290006935D1 /* CardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardTableViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				F2910F610F781420006C3404 /* libsqlite3.0.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623240D0F684500981E51 /* CCGTrackerAppDelegate.h */,
+				1D3623250D0F684500981E51 /* CCGTrackerAppDelegate.m */,
+				F2910EB90F76F3AC006C3404 /* Controller */,
+				F2910EAF0F76F37C006C3404 /* Model */,
+				F2910EB80F76F3A2006C3404 /* View */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* CCGTracker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* CCGTracker_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F267DE720F8984D4007B24CE /* card_collector.sqlite */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				F2910FCD0F781D1B006C3404 /* CardSetTableViewController.xib */,
+				F267E0240F8AAE00007B24CE /* CardTableViewController.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2910F600F781420006C3404 /* libsqlite3.0.dylib */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2910EA10F76F33E006C3404 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				F2910EA30F76F364006C3404 /* FMDatabase.h */,
+				F2910EA40F76F365006C3404 /* FMDatabase.m */,
+				F2910EA50F76F365006C3404 /* FMDatabaseAdditions.h */,
+				F2910EA60F76F365006C3404 /* FMDatabaseAdditions.m */,
+				F2910EA70F76F365006C3404 /* FMResultSet.h */,
+				F2910EA80F76F365006C3404 /* FMResultSet.m */,
+			);
+			name = FMDB;
+			sourceTree = "<group>";
+		};
+		F2910EA20F76F346006C3404 /* DataAccess */ = {
+			isa = PBXGroup;
+			children = (
+				F2910EAC0F76F372006C3404 /* CardDAO.h */,
+				F2910EAD0F76F372006C3404 /* CardDAO.m */,
+				F2910EA10F76F33E006C3404 /* FMDB */,
+			);
+			name = DataAccess;
+			sourceTree = "<group>";
+		};
+		F2910EAF0F76F37C006C3404 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2910EB20F76F392006C3404 /* CardSet.h */,
+				F2910EB30F76F392006C3404 /* CardSet.m */,
+				F2910EB40F76F392006C3404 /* Card.h */,
+				F2910EB50F76F392006C3404 /* Card.m */,
+				F2910EA20F76F346006C3404 /* DataAccess */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F2910EB80F76F3A2006C3404 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F2BCF1880F8E8290006935D1 /* CardTableViewCell.h */,
+				F2BCF1890F8E8290006935D1 /* CardTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F2910EB90F76F3AC006C3404 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F2910F6F0F7816AE006C3404 /* CardSetTableViewController.h */,
+				F2910F700F7816AE006C3404 /* CardSetTableViewController.m */,
+				F267DDB90F897388007B24CE /* CardTableViewController.h */,
+				F267DDBA0F897388007B24CE /* CardTableViewController.m */,
+				F267DDBC0F8973DD007B24CE /* CardViewController.h */,
+				F267DDBD0F8973DD007B24CE /* CardViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* CCGTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CCGTracker" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CCGTracker;
+			productName = CCGTracker;
+			productReference = 1D6058910D05DD3D006BFB54 /* CCGTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CCGTracker" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* CCGTracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				F2910FCE0F781D1B006C3404 /* CardSetTableViewController.xib in Resources */,
+				F267DF0F0F89A0B0007B24CE /* card_collector.sqlite in Resources */,
+				F267E0250F8AAE00007B24CE /* CardTableViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* CCGTrackerAppDelegate.m in Sources */,
+				F2910EA90F76F365006C3404 /* FMDatabase.m in Sources */,
+				F2910EAA0F76F365006C3404 /* FMDatabaseAdditions.m in Sources */,
+				F2910EAB0F76F365006C3404 /* FMResultSet.m in Sources */,
+				F2910EAE0F76F372006C3404 /* CardDAO.m in Sources */,
+				F2910EB60F76F392006C3404 /* CardSet.m in Sources */,
+				F2910EB70F76F392006C3404 /* Card.m in Sources */,
+				F2910F710F7816AE006C3404 /* CardSetTableViewController.m in Sources */,
+				F267DDBB0F897388007B24CE /* CardTableViewController.m in Sources */,
+				F267DDBE0F8973DD007B24CE /* CardViewController.m in Sources */,
+				F2BCF18A0F8E8290006935D1 /* CardTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CCGTracker_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = CCGTracker;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CCGTracker_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = CCGTracker;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos2.2;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos2.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CCGTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CCGTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
