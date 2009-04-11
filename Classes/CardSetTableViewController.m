@@ -1,14 +1,16 @@
 //
 //  CardSetTableViewController.m
 //  CCGTracker
+//	UITableViewController for viewing CardSets.
 //
 //  Created by Greg Heidorn on 3/23/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
+//  Copyright 2009 Eleven27, LLC. All rights reserved.
 //
 
 #import "CardSetTableViewController.h"
 #import "CardDAO.h"
 #import "CardSet.h"
+#import "CardSetTableViewCell.h"
 #import "CardTableViewController.h"
 
 @implementation CardSetTableViewController
@@ -29,6 +31,8 @@
 	
 	[cardDAO release];
 
+	self.title = @"Card Sets";
+	
     return self;
 }
 
@@ -52,17 +56,20 @@
 - (UITableViewCell *)tableView:(UITableView *)tv cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tv dequeueReusableCellWithIdentifier:CellIdentifier];
+    //UITableViewCell *cell = [tv dequeueReusableCellWithIdentifier:CellIdentifier];
+	CardSetTableViewCell *cell = (CardSetTableViewCell *)[tv dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[CardSetTableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
     }
-    
+	
+    [cell buildLabels:[cardSets objectAtIndex:indexPath.row]];
+	/*
 	// index of table view correlates to index of array
 	CardSet *cardSet = [cardSets objectAtIndex:indexPath.row];
 	
 	// set cell text
 	cell.text = cardSet.name;
-	
+	*/
     return cell;
 }
 

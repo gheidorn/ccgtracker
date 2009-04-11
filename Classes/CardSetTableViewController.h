@@ -1,6 +1,7 @@
 //
 //  CardSetTableViewController.h
 //  CCGTracker
+//	UITableViewController for viewing CardSets.
 //
 //  Created by Greg Heidorn on 3/23/09.
 //  Copyright 2009 Eleven27, LLC. All rights reserved.
