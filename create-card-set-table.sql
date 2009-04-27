@@ -1,0 +1,13 @@
+DROP TABLE IF EXISTS card_set;
+CREATE TABLE card_set ('id' INTEGER PRIMARY KEY, 'name' CHAR(30), 'num_cards' INTEGER);
+INSERT INTO card_set(id, name, num_cards) VALUES (1,'Heroes of Azeroth', 361);
+INSERT INTO card_set(id, name, num_cards) VALUES (2,'Onyxias Lair', 97);
+INSERT INTO card_set(id, name, num_cards) VALUES (3,'Dark Portal', 337);
+INSERT INTO card_set(id, name, num_cards) VALUES (4,'Molten Core', 89);
+INSERT INTO card_set(id, name, num_cards) VALUES (5,'Fires of Outland', 249);
+INSERT INTO card_set(id, name, num_cards) VALUES (6,'Feast of Winter Veil', 10);
+INSERT INTO card_set(id, name, num_cards) VALUES (7,'March of the Legion', 322);
+INSERT INTO card_set(id, name, num_cards) VALUES (8,'Magtheridons Lair', 63);
+INSERT INTO card_set(id, name, num_cards) VALUES (9,'Servants of the Betrayer', 267);
+INSERT INTO card_set(id, name, num_cards) VALUES (10,'Hunt for Illidan', 255);
+INSERT INTO card_set(id, name, num_cards) VALUES (11,'Drums of War', 279);
