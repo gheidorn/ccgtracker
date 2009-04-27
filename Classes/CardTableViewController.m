@@ -1,15 +1,17 @@
 //
 //  CardTableViewController.m
 //  CCGTracker
+//	UITableViewController for viewing Cards.
 //
 //  Created by Greg Heidorn on 4/5/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
+//  Copyright 2009 Eleven27, LLC. All rights reserved.
 //
 
 #import "CardTableViewController.h"
 #import "CardTableViewCell.h"
 #import "CardDAO.h"
 #import "Card.h"
+#import "CardSet.h"
 
 #define CARD_NAME_TAG 1
 #define CARD_TYPE_TAG 2
@@ -28,6 +30,12 @@
 
 	// retrieve card sets and add to controller
 	self.cards = [cardDAO getCardsForCardSet:cardSetId];
+	
+	// retrieve card set for title
+	CardSet *cardSet = [cardDAO getCardSet:cardSetId];
+	
+	// set table view title
+	self.title = cardSet.name;
 	
 	[cardDAO release];
 	
@@ -135,21 +143,18 @@
 	// AnotherViewController *anotherViewController = [[AnotherViewController alloc] initWithNibName:@"AnotherView" bundle:nil];
 	// [self.navigationController pushViewController:anotherViewController];
 	// [anotherViewController release];
-	
 	/*
-	NSString *message = [[NSString alloc] initWithFormat:@"You selected %@", indexPath.row];
+	NSLog(@"card picked: %d", indexPath.row);
+	
 	UIAlertView *alert = [[UIAlertView alloc] 
 						  initWithTitle:@"Row selected!" 
-						  message:message 
+						  message:@"asdf!" 
 						  delegate:nil
 						  cancelButtonTitle:@"Yes I did!"
 						  otherButtonTitles:nil];
 	[alert show];
-	
-	[message release];
 	[alert release];
 	 */
-	NSLog(@"card picked: %d", indexPath.row);
 }
 
 - (void)dealloc {

@@ -1,6 +1,6 @@
 //
 //  CardDAO.m
-//  Wrapper for database access.
+//  Data Access Object for Cards in the application.
 //
 //  Created by Greg Heidorn on 3/14/09.
 //  Copyright 2009 Eleven27, LLC. All rights reserved.
@@ -12,6 +12,8 @@
 #import "FMDatabase.h"
 #import "FMResultSet.h"
 
+#define DB_NAME @"ccgtracker.db"
+
 @implementation CardDAO
 
 - (void)createEditableCopyOfDatabaseIfNeeded {
@@ -21,7 +23,7 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
 	//NSLog(@"path %@", documentsDirectory);
-    NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"card_collector.sqlite"];
+    NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:DB_NAME];
 	//NSLog(@"path %@", writableDBPath);
     success = [fileManager fileExistsAtPath:writableDBPath];
 	//NSLog(@"database exists? %d", success);
@@ -29,7 +31,7 @@
 	if (success) return;
     
 	// writable database does not exist, so copy the default to the appropriate location.
-    NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"card_collector.sqlite"];
+    NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:DB_NAME];
     NSError *error;
     success = [fileManager copyItemAtPath:defaultDBPath toPath:writableDBPath error:&error];
     if (!success) {
@@ -43,8 +45,8 @@
 	
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *documentsDirectory = [paths objectAtIndex:0];
-	NSString *path = [documentsDirectory stringByAppendingPathComponent:@"card_collector.sqlite"];
-	
+	NSString *path = [documentsDirectory stringByAppendingPathComponent:DB_NAME];
+		
 	NSLog(@"path %@", path);
 	
 	FMDatabase* db = [FMDatabase databaseWithPath:path];
@@ -65,8 +67,7 @@
 		CardSet *cardSet = [[CardSet alloc] init];
 		cardSet.cardSetId = [rs intForColumnIndex:0];
 		cardSet.name = [rs stringForColumnIndex:1];
-		cardSet.releaseSequence = [rs stringForColumnIndex:2];
-		cardSet.totalCards = [rs intForColumnIndex:3];
+		cardSet.totalCards = [rs intForColumnIndex:2];
 		[cardSets addObject:cardSet];
 		[cardSet release];
 	}
@@ -83,7 +84,7 @@
 	
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *documentsDirectory = [paths objectAtIndex:0];
-	NSString *path = [documentsDirectory stringByAppendingPathComponent:@"card_collector.sqlite"];
+	NSString *path = [documentsDirectory stringByAppendingPathComponent:DB_NAME];
 	
 	FMDatabase* db = [FMDatabase databaseWithPath:path];
     
@@ -121,13 +122,14 @@
 	[db close];
 	return cards;
 }
+
 - (Card *) getCard:(NSInteger)cardId
 {
 	[self createEditableCopyOfDatabaseIfNeeded];
 	
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *documentsDirectory = [paths objectAtIndex:0];
-	NSString *path = [documentsDirectory stringByAppendingPathComponent:@"card_collector.sqlite"];
+	NSString *path = [documentsDirectory stringByAppendingPathComponent:DB_NAME];
 	FMDatabase* db = [FMDatabase databaseWithPath:path];
     if (![db open])
 	{
@@ -156,13 +158,52 @@
 	return card;
 }
 
+- (CardSet *) getCardSet:(NSInteger)cardSetId
+{
+	[self createEditableCopyOfDatabaseIfNeeded];
+	
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString *documentsDirectory = [paths objectAtIndex:0];
+	NSString *path = [documentsDirectory stringByAppendingPathComponent:DB_NAME];
+	
+	FMDatabase* db = [FMDatabase databaseWithPath:path];
+    
+	if (![db open])
+	{
+        NSLog(@"Could not open db.");
+        return nil;
+    }
+	
+	NSString *sql = [NSString stringWithFormat:@"select * from card_set where id = %d", cardSetId];
+	FMResultSet *rs = [db executeQuery:sql];
+	
+	CardSet *cardSet = [[CardSet alloc] init];
+	
+	if ([rs next])
+	{
+		/*
+		NSLog(@"%@ - %@",
+			  [rs stringForColumnIndex:0],
+			  [rs stringForColumnIndex:1]);
+		*/
+		cardSet.cardSetId = [rs intForColumnIndex:0];
+		cardSet.name = [rs stringForColumnIndex:1];
+		cardSet.totalCards = [rs intForColumnIndex:2];
+		//cardSet.totalCardsOwned = [rs intForColumnIndex:4];
+		//[cardSet release];
+	}
+	[rs close];
+	[db close];
+	return cardSet;
+}
+
 - (void) updateTotalForCard:(NSInteger)cardId newTotal:(NSInteger)value
 {
 	[self createEditableCopyOfDatabaseIfNeeded];
 	
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *documentsDirectory = [paths objectAtIndex:0];
-	NSString *path = [documentsDirectory stringByAppendingPathComponent:@"card_collector.sqlite"];
+	NSString *path = [documentsDirectory stringByAppendingPathComponent:DB_NAME];
 	FMDatabase* db = [FMDatabase databaseWithPath:path];
     if (![db open])
 	{

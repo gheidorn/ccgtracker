@@ -1,6 +1,6 @@
 //
 //  Card.m
-//  CardCollector
+//  CCGTracker
 //
 //  Created by Greg Heidorn on 3/14/09.
 //  Copyright 2009 Eleven27, LLC. All rights reserved.

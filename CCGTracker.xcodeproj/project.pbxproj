@@ -27,6 +27,11 @@
 		F2910F710F7816AE006C3404 /* CardSetTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2910F700F7816AE006C3404 /* CardSetTableViewController.m */; };
 		F2910FCE0F781D1B006C3404 /* CardSetTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2910FCD0F781D1B006C3404 /* CardSetTableViewController.xib */; };
 		F2BCF18A0F8E8290006935D1 /* CardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BCF1890F8E8290006935D1 /* CardTableViewCell.m */; };
+		F2BCF2D90F9004DF006935D1 /* CardSetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BCF2D80F9004DF006935D1 /* CardSetTableViewCell.m */; };
+		F2C371CF0FA41510000C684C /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C371CE0FA41510000C684C /* down.png */; };
+		F2C371D10FA41521000C684C /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C371D00FA41521000C684C /* up.png */; };
+		F2C371F40FA41899000C684C /* ccgtracker.db in Resources */ = {isa = PBXBuildFile; fileRef = F2C371F30FA41899000C684C /* ccgtracker.db */; };
+		F2C372320FA41C67000C684C /* PossessionIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C372310FA41C67000C684C /* PossessionIndicatorView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +69,13 @@
 		F2910FCD0F781D1B006C3404 /* CardSetTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardSetTableViewController.xib; sourceTree = "<group>"; };
 		F2BCF1880F8E8290006935D1 /* CardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardTableViewCell.h; sourceTree = "<group>"; };
 		F2BCF1890F8E8290006935D1 /* CardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardTableViewCell.m; sourceTree = "<group>"; };
+		F2BCF2D70F9004DF006935D1 /* CardSetTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardSetTableViewCell.h; sourceTree = "<group>"; };
+		F2BCF2D80F9004DF006935D1 /* CardSetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardSetTableViewCell.m; sourceTree = "<group>"; };
+		F2C371CE0FA41510000C684C /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down.png; sourceTree = "<group>"; };
+		F2C371D00FA41521000C684C /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up.png; sourceTree = "<group>"; };
+		F2C371F30FA41899000C684C /* ccgtracker.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = ccgtracker.db; sourceTree = "<group>"; };
+		F2C372300FA41C67000C684C /* PossessionIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PossessionIndicatorView.h; sourceTree = "<group>"; };
+		F2C372310FA41C67000C684C /* PossessionIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PossessionIndicatorView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +137,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F2C371F30FA41899000C684C /* ccgtracker.db */,
+				F2C371D00FA41521000C684C /* up.png */,
+				F2C371CE0FA41510000C684C /* down.png */,
 				F267DE720F8984D4007B24CE /* card_collector.sqlite */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
@@ -185,6 +200,10 @@
 			children = (
 				F2BCF1880F8E8290006935D1 /* CardTableViewCell.h */,
 				F2BCF1890F8E8290006935D1 /* CardTableViewCell.m */,
+				F2BCF2D70F9004DF006935D1 /* CardSetTableViewCell.h */,
+				F2BCF2D80F9004DF006935D1 /* CardSetTableViewCell.m */,
+				F2C372300FA41C67000C684C /* PossessionIndicatorView.h */,
+				F2C372310FA41C67000C684C /* PossessionIndicatorView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -248,6 +267,9 @@
 				F2910FCE0F781D1B006C3404 /* CardSetTableViewController.xib in Resources */,
 				F267DF0F0F89A0B0007B24CE /* card_collector.sqlite in Resources */,
 				F267E0250F8AAE00007B24CE /* CardTableViewController.xib in Resources */,
+				F2C371CF0FA41510000C684C /* down.png in Resources */,
+				F2C371D10FA41521000C684C /* up.png in Resources */,
+				F2C371F40FA41899000C684C /* ccgtracker.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +292,8 @@
 				F267DDBB0F897388007B24CE /* CardTableViewController.m in Sources */,
 				F267DDBE0F8973DD007B24CE /* CardViewController.m in Sources */,
 				F2BCF18A0F8E8290006935D1 /* CardTableViewCell.m in Sources */,
+				F2BCF2D90F9004DF006935D1 /* CardSetTableViewCell.m in Sources */,
+				F2C372320FA41C67000C684C /* PossessionIndicatorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
